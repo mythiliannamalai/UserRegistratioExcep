@@ -41,13 +41,6 @@ namespace UserRegisTesting
             string PhoneNumber = "97 9790486506";
             userRegistration.PhoneNumbers(PhoneNumber);
             Assert.AreEqual("97 9790486506", PhoneNumber);
-        }
-        [Test]
-        public void PasswordTesting()
-        {
-            string PassWord = "Z@1mythiliannamalai";
-            userRegistration.PassWords(PassWord);
-            Assert.AreEqual("Z@1mythiliannamalai", PassWord);
-        }      
+        }            
     }
 }
