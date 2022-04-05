@@ -27,13 +27,6 @@ namespace UserRegisTesting
             string Lastname = "Annamalai";
             userRegistration.Lastenamein(Lastname);
             Assert.AreEqual("Annamalai", Lastname);
-        }
-        [Test]
-        public void EmailTesting()
-        {
-            string Email = "mythili.abc@gmail.com";
-            userRegistration.Emails(Email);
-            Assert.AreEqual("mythili.abc@gmail.com", Email);
-        }               
+        }                              
     }
 }
