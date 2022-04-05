@@ -46,5 +46,19 @@ namespace Patten
                 Console.WriteLine(ex.Message);
             }
         }
+        public void Emails(string Email)
+        {
+            Regex EmailReg = new Regex(@"^[a-z](.[a-z])+@[a-z]+.[a-z]{3}(.[a-z]{2})$");
+            try
+            {
+                if (EmailReg.IsMatch(Email))
+                    Console.WriteLine(" Valid Email..");
+            }
+            catch (UserRegistractionException ex)
+            {
+                throw new UserRegistractionException(UserRegistractionException.ExceptionType.Invalid, "invalid Email...");
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
