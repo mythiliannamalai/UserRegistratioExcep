@@ -88,5 +88,19 @@ namespace Patten
                 Console.WriteLine(ex.Message);
             }
         }
+        public void AllEmails(string AllEmail)
+        {
+            Regex AllEmailReg = new Regex(@"^[a-z]((.-+){1})([0-9]{3})+@([0-9]{1})([a-z]{,5})+.[a-z]{3}(.[a-z]{2,})$");
+            try
+            {
+                if (AllEmailReg.IsMatch(AllEmail))
+                    Console.WriteLine(" Valid Emali patten..");
+            }
+            catch (UserRegistractionException ex)
+            {
+                throw new UserRegistractionException(UserRegistractionException.ExceptionType.Invalid, "invalid Password...");
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
