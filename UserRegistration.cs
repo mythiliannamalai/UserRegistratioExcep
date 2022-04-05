@@ -32,5 +32,19 @@ namespace Patten
                 Console.WriteLine(ex.Message);
             }
         }
+        public void Lastenamein(string Lastname)
+        {
+            Regex LastNames = new Regex(@"^[A-z][A-Za-z]{3,}$");
+            try
+            {
+                if (LastNames.IsMatch(Lastname))
+                    Console.WriteLine(" Valid name..");
+            }
+            catch (UserRegistractionException ex)
+            {
+                throw new UserRegistractionException(UserRegistractionException.ExceptionType.Invalid, "invalid name...");
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
