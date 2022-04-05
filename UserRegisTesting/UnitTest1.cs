@@ -34,13 +34,6 @@ namespace UserRegisTesting
             string Email = "mythili.abc@gmail.com";
             userRegistration.Emails(Email);
             Assert.AreEqual("mythili.abc@gmail.com", Email);
-        }
-        [Test]
-        public void PhoneNumberTesting()
-        {
-            string PhoneNumber = "97 9790486506";
-            userRegistration.PhoneNumbers(PhoneNumber);
-            Assert.AreEqual("97 9790486506", PhoneNumber);
-        }            
+        }               
     }
 }
