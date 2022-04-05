@@ -48,13 +48,6 @@ namespace UserRegisTesting
             string PassWord = "Z@1mythiliannamalai";
             userRegistration.PassWords(PassWord);
             Assert.AreEqual("Z@1mythiliannamalai", PassWord);
-        }
-        [Test]
-        public void AllEmailTesting()
-        {
-            string Email = "mythili.abc@gmail.com";
-            userRegistration.AllEmails(Email);
-            Assert.AreEqual("mythili.abc@gmail.com", Email);
-        }
+        }      
     }
 }
