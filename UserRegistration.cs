@@ -74,5 +74,19 @@ namespace Patten
                 Console.WriteLine(ex.Message);
             }
         }
+        public void PassWords(string PassWord)
+        {
+            Regex PassWordReg = new Regex(@"^[A-Z]@[0-9][A-Za-z]{8,}$");
+            try
+            {
+                if (PassWordReg.IsMatch(PassWord))
+                    Console.WriteLine(" Valid Password..");
+            }
+            catch (UserRegistractionException ex)
+            {
+                throw new UserRegistractionException(UserRegistractionException.ExceptionType.Invalid, "invalid Password...");
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
