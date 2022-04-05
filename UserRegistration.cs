@@ -60,5 +60,19 @@ namespace Patten
                 Console.WriteLine(ex.Message);
             }
         }
+        public void PhoneNumbers(string PhoneNumber)
+        {
+            Regex PhoneNumberReg = new Regex(@"^[0-9]{2}\s[0-9]{10}$");
+            try
+            {
+                if (PhoneNumberReg.IsMatch(PhoneNumber))
+                    Console.WriteLine(" Valid Phone number..");
+            }
+            catch (UserRegistractionException ex)
+            {
+                throw new UserRegistractionException(UserRegistractionException.ExceptionType.Invalid, "invalid PhoneNummber...");
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
